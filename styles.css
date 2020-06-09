@@ -2,6 +2,11 @@
     font-family: 'Roboto', sans-serif;
 }
 
+.plotChartFrame rect {
+    fill: none;
+    stroke: #000000;
+    stroke-width: 1;
+}
 
 /*Element Styling*/
 

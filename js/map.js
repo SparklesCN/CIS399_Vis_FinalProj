@@ -61,7 +61,7 @@ class Map {
             .selectAll("circle")
             .data(this.data)
 			.join("circle")
-			.attr("r", "5")
+			.attr("r", "3")
 			.attr("cx", (d) => {
                 let curLong = that.projection([d.Long, d.Lat])[0];
                 if (isNaN(curLong)) {

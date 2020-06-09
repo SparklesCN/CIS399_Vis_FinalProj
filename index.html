@@ -37,11 +37,268 @@
         </div>
 
         <div id="rank-graph">
-            <svg>
-
+            <svg height="600" width="600" class="plotChartFrame">
+                <text id="rank-date"> </text>
+                <rect></rect>
+                <rect></rect>
+                <rect></rect>
+                <rect></rect>
+                <rect></rect>
+                <rect></rect>
+                <rect></rect>
+                <rect></rect>
+                <rect></rect>
+                <rect></rect>
+                <rect></rect>
+                <rect></rect>
+                <rect></rect>
+                <rect></rect>
+                <rect></rect>
+                <rect></rect>
+                <rect></rect>
+                <rect></rect>
+                <rect></rect>
+                <rect></rect>
+                <text class="rankPlaceName"></text>
+                <text class="rankPlaceName"></text>
+                <text class="rankPlaceName"></text>
+                <text class="rankPlaceName"></text>
+                <text class="rankPlaceName"></text>
+                <text class="rankPlaceName"></text>
+                <text class="rankPlaceName"></text>
+                <text class="rankPlaceName"></text>
+                <text class="rankPlaceName"></text>
+                <text class="rankPlaceName"></text>
+                <text class="rankPlaceName"></text>
+                <text class="rankPlaceName"></text>
+                <text class="rankPlaceName"></text>
+                <text class="rankPlaceName"></text>
+                <text class="rankPlaceName"></text>
+                <text class="rankPlaceName"></text>
+                <text class="rankPlaceName"></text>
+                <text class="rankPlaceName"></text>
+                <text class="rankPlaceName"></text>
+                <text class="rankPlaceName"></text>
+                <text class="rankPlaceCase"></text>
+                <text class="rankPlaceCase"></text>
+                <text class="rankPlaceCase"></text>
+                <text class="rankPlaceCase"></text>
+                <text class="rankPlaceCase"></text>
+                <text class="rankPlaceCase"></text>
+                <text class="rankPlaceCase"></text>
+                <text class="rankPlaceCase"></text>
+                <text class="rankPlaceCase"></text>
+                <text class="rankPlaceCase"></text>
+                <text class="rankPlaceCase"></text>
+                <text class="rankPlaceCase"></text>
+                <text class="rankPlaceCase"></text>
+                <text class="rankPlaceCase"></text>
+                <text class="rankPlaceCase"></text>
+                <text class="rankPlaceCase"></text>
+                <text class="rankPlaceCase"></text>
+                <text class="rankPlaceCase"></text>
+                <text class="rankPlaceCase"></text>
+                <text class="rankPlaceCase"></text>
+                <text id="rank-note-1"></text>
+                <text id="rank-note-2"></text>
+                <rect width="600" height="600"> </rect>
             </svg>
         </div>
 
+    </div>
+
+    <div class="trendLine">
+        <svg id="selected-plotChart" class="plotChartFrame" width="300", height="300" transform="translate(50, 0)">
+            <rect width="300" height="300"> </rect>
+            <g transform="translate(50, 50) " id="select-plot">
+                <circle cx="10.0" cy="8.04" r="0.4">
+                  <title>10.0, 8.04</title>
+                </circle>
+                <circle cx="8.0" cy="6.95" r="0.4">
+                  <title>8.0, 6.95</title>
+                </circle>
+                <circle cx="13.0" cy="7.58" r="0.4">
+                  <title>13.0, 7.58</title>
+                </circle>
+                <circle cx="9.0" cy="8.81" r="0.4">
+                  <title>9.0, 8.81</title>
+                </circle>
+                <circle cx="11.0" cy="8.33" r="0.4">
+                  <title>11.0, 8.33</title>
+                </circle>
+                <circle cx="14.0" cy="9.96" r="0.4">
+                  <title>14,0, 9.96</title>
+                </circle>
+                <circle cx="6.0" cy="7.22" r="0.4">
+                  <title>6.0, 7.22</title>
+                </circle>
+                <circle cx="4.0" cy="4.26" r="0.4">
+                  <title>4.0, 4.26</title>
+                </circle>
+                <circle cx="12.0" cy="10.84" r="0.4">
+                  <title>12.0, 10.84</title>
+                </circle>
+                <circle cx="7.0" cy="4.82" r="0.4">
+                  <title>7.0, 4.82</title>
+                </circle>
+                <circle cx="10.0" cy="8.04" r="0.4">
+                  <title>10.0, 8.04</title>
+                </circle>
+                <circle cx="8.0" cy="6.95" r="0.4">
+                  <title>8.0, 6.95</title>
+                </circle>
+                <circle cx="13.0" cy="7.58" r="0.4">
+                  <title>13.0, 7.58</title>
+                </circle>
+                <circle cx="9.0" cy="8.81" r="0.4">
+                  <title>9.0, 8.81</title>
+                </circle>
+                <circle cx="11.0" cy="8.33" r="0.4">
+                  <title>11.0, 8.33</title>
+                </circle>
+                <circle cx="14.0" cy="9.96" r="0.4">
+                  <title>14,0, 9.96</title>
+                </circle>
+                <circle cx="6.0" cy="7.22" r="0.4">
+                  <title>6.0, 7.22</title>
+                </circle>
+                <circle cx="4.0" cy="4.26" r="0.4">
+                  <title>4.0, 4.26</title>
+                </circle>
+                <circle cx="12.0" cy="10.84" r="0.4">
+                  <title>12.0, 10.84</title>
+                </circle>
+                <circle cx="7.0" cy="4.82" r="0.4">
+                  <title>7.0, 4.82</title>
+                </circle>
+                <circle cx="10.0" cy="8.04" r="0.4">
+                  <title>10.0, 8.04</title>
+                </circle>
+                <circle cx="8.0" cy="6.95" r="0.4">
+                  <title>8.0, 6.95</title>
+                </circle>
+                <circle cx="13.0" cy="7.58" r="0.4">
+                  <title>13.0, 7.58</title>
+                </circle>
+                <circle cx="9.0" cy="8.81" r="0.4">
+                  <title>9.0, 8.81</title>
+                </circle>
+                <circle cx="11.0" cy="8.33" r="0.4">
+                  <title>11.0, 8.33</title>
+                </circle>
+                <circle cx="14.0" cy="9.96" r="0.4">
+                  <title>14,0, 9.96</title>
+                </circle>
+                <circle cx="6.0" cy="7.22" r="0.4">
+                  <title>6.0, 7.22</title>
+                </circle>
+                <circle cx="4.0" cy="4.26" r="0.4">
+                  <title>4.0, 4.26</title>
+                </circle>
+                <circle cx="12.0" cy="10.84" r="0.4">
+                  <title>12.0, 10.84</title>
+                </circle>
+                <circle cx="7.0" cy="4.82" r="0.4">
+                  <title>7.0, 4.82</title>
+                </circle>
+                
+        </svg> 
+
+        <svg id="us-plotChart" class="plotChartFrame" width="300", height="300" transform="translate(100, 0)">
+            <rect width="300" height="300"> </rect>
+            <g transform="translate(50, 50) " id="us-plot">
+                <circle cx="10.0" cy="8.04" r="0.4">
+                  <title>10.0, 8.04</title>
+                </circle>
+                <circle cx="8.0" cy="6.95" r="0.4">
+                  <title>8.0, 6.95</title>
+                </circle>
+                <circle cx="13.0" cy="7.58" r="0.4">
+                  <title>13.0, 7.58</title>
+                </circle>
+                <circle cx="9.0" cy="8.81" r="0.4">
+                  <title>9.0, 8.81</title>
+                </circle>
+                <circle cx="11.0" cy="8.33" r="0.4">
+                  <title>11.0, 8.33</title>
+                </circle>
+                <circle cx="14.0" cy="9.96" r="0.4">
+                  <title>14,0, 9.96</title>
+                </circle>
+                <circle cx="6.0" cy="7.22" r="0.4">
+                  <title>6.0, 7.22</title>
+                </circle>
+                <circle cx="4.0" cy="4.26" r="0.4">
+                  <title>4.0, 4.26</title>
+                </circle>
+                <circle cx="12.0" cy="10.84" r="0.4">
+                  <title>12.0, 10.84</title>
+                </circle>
+                <circle cx="7.0" cy="4.82" r="0.4">
+                  <title>7.0, 4.82</title>
+                </circle>
+                <circle cx="10.0" cy="8.04" r="0.4">
+                  <title>10.0, 8.04</title>
+                </circle>
+                <circle cx="8.0" cy="6.95" r="0.4">
+                  <title>8.0, 6.95</title>
+                </circle>
+                <circle cx="13.0" cy="7.58" r="0.4">
+                  <title>13.0, 7.58</title>
+                </circle>
+                <circle cx="9.0" cy="8.81" r="0.4">
+                  <title>9.0, 8.81</title>
+                </circle>
+                <circle cx="11.0" cy="8.33" r="0.4">
+                  <title>11.0, 8.33</title>
+                </circle>
+                <circle cx="14.0" cy="9.96" r="0.4">
+                  <title>14,0, 9.96</title>
+                </circle>
+                <circle cx="6.0" cy="7.22" r="0.4">
+                  <title>6.0, 7.22</title>
+                </circle>
+                <circle cx="4.0" cy="4.26" r="0.4">
+                  <title>4.0, 4.26</title>
+                </circle>
+                <circle cx="12.0" cy="10.84" r="0.4">
+                  <title>12.0, 10.84</title>
+                </circle>
+                <circle cx="7.0" cy="4.82" r="0.4">
+                  <title>7.0, 4.82</title>
+                </circle>
+                <circle cx="10.0" cy="8.04" r="0.4">
+                  <title>10.0, 8.04</title>
+                </circle>
+                <circle cx="8.0" cy="6.95" r="0.4">
+                  <title>8.0, 6.95</title>
+                </circle>
+                <circle cx="13.0" cy="7.58" r="0.4">
+                  <title>13.0, 7.58</title>
+                </circle>
+                <circle cx="9.0" cy="8.81" r="0.4">
+                  <title>9.0, 8.81</title>
+                </circle>
+                <circle cx="11.0" cy="8.33" r="0.4">
+                  <title>11.0, 8.33</title>
+                </circle>
+                <circle cx="14.0" cy="9.96" r="0.4">
+                  <title>14,0, 9.96</title>
+                </circle>
+                <circle cx="6.0" cy="7.22" r="0.4">
+                  <title>6.0, 7.22</title>
+                </circle>
+                <circle cx="4.0" cy="4.26" r="0.4">
+                  <title>4.0, 4.26</title>
+                </circle>
+                <circle cx="12.0" cy="10.84" r="0.4">
+                  <title>12.0, 10.84</title>
+                </circle>
+                <circle cx="7.0" cy="4.82" r="0.4">
+                  <title>7.0, 4.82</title>
+                </circle>
+                
+        </svg> 
     </div>
 </body>
 
