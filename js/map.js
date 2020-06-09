@@ -6,8 +6,6 @@ class Map {
 
 	drawMap(world) {
 		let geojson = topojson.feature(world, world.objects.countries);
-        console.log("geo features")
-		console.log(geojson.features);
 		let isoCode = new isoGenerator();
 
 		//d.Coords[1],d.Coords[0] // y first

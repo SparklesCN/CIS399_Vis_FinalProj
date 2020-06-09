@@ -28,7 +28,7 @@ jQuery.ajax({
 
 function initProj(dynamicData) {
   console.log("Get Dynamic Data from git: ")
-	console.log(dynamicData);
+	console.log(dynamicData[51]);
 	// initial the map
 	const worldMap = new Map(dynamicData);
 
@@ -36,6 +36,8 @@ function initProj(dynamicData) {
 	        worldMap.drawMap(mapData);
 
 	});
+
+  const rank = new worldRank(dynamicData);
 
 }
 
