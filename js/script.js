@@ -27,6 +27,7 @@ jQuery.ajax({
 
 
 function initProj(dynamicData) {
+  console.log("Get Dynamic Data from git: ")
 	console.log(dynamicData);
 	// initial the map
 	const worldMap = new Map(dynamicData);
