@@ -79,7 +79,6 @@ class worldRank {
 		var mm = String(yesterday.getMonth() + 1); //January is 0!
 		var yyyy = yesterday.getFullYear();
 		yesterday = mm + '/' + dd + '/' + yyyy.toString()[2] + yyyy.toString()[3]
-		console.log(yesterday);
 		return yesterday;
 	}
 

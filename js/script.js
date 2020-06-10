@@ -28,9 +28,17 @@ jQuery.ajax({
 
 function initProj(dynamicData) {
   console.log("Get Dynamic Data from git: ")
-	console.log(dynamicData[51]);
+	console.log(dynamicData[225]);
 	// initial the map
-	const worldMap = new Map(dynamicData);
+
+  function updateSelect(data) {
+    console.log(data);
+
+  }
+
+
+
+	const worldMap = new Map(dynamicData, updateSelect);
 
 	d3.json('data/world.json').then(mapData => {
 	        worldMap.drawMap(mapData);
@@ -39,7 +47,27 @@ function initProj(dynamicData) {
 
   const rank = new worldRank(dynamicData);
 
+  const usTrend = new UsTrend(dynamicData[225]);
+
 }
+
+function getPast30Days() {
+    var arr = [];
+    var beforedate = new Date();
+    beforedate = new Date(new Date().setDate(beforedate.getDate()- 2))
+    for (let i = 29; i >= 0; i--) {
+      var priordate = new Date(new Date().setDate(beforedate.getDate()-i));
+      var dd2 = priordate.getDate();
+      var mm2 = priordate.getMonth()+1;//January is 0, so always add + 1
+      var yyyy2 = priordate.getFullYear();
+      var datefrommonthago = mm2 + '/' + dd2 + '/' + yyyy2.toString()[2] + yyyy2.toString()[3];
+      arr.push(datefrommonthago);
+    }
+
+    return arr;
+
+  }
+
 
 
 

@@ -1,5 +1,6 @@
 class Map {
-	constructor(data) {
+	constructor(data, updateSelect) {
+        this.updateSelect = updateSelect;
 		this.data = data;
         this.projection = d3.geoWinkel3().scale(140).translate([365, 225]);
 	}
@@ -86,6 +87,16 @@ class Map {
                 }
                 return d["Country/Region"];
             })
+            .on("click", function(d, i) {
+                that.updateSelect(d);
+            })
+            .append("title")
+            .text((d) => {
+                if (d["Province/State"] != "") {
+                    return d["Province/State"] + ", " + d["Country/Region"];
+                }
+                return d["Country/Region"];
+            });
 			
 	}
 }

@@ -15,6 +15,8 @@
 
     <script src="js/map.js" async></script>
     <script src="js/worldRank.js" async></script>
+    <script src="js/UsTrend.js" async></script>
+    <script src="js/selectTrend.js" async></script>
     <script src="js/isoCode.js" async></script>
     <script src="js/script.js" async></script>
 
@@ -22,7 +24,7 @@
 
 <body>
     <div class="header">
-        <h1>World COVID-19</h1>
+        <h1>Dynamic World COVID-19 (auto update with latest data)</h1>
         <p class="info">Name: Xiaodong Quan; E-Mail: xquan@uoregon.edu; UID: 951578948</p>
     </div>
     <div class="wrapper">
@@ -108,8 +110,11 @@
     </div>
 
     <div class="trendLine">
-        <svg id="selected-plotChart" class="plotChartFrame" width="300", height="300" transform="translate(50, 0)">
+        <svg id="selected-plotChart" class="plotChartFrame" width="300", height="300">
             <rect width="300" height="300"> </rect>
+            <g id="select-x-axis" transform="translate(60, 250)"></g>
+            <g id="select-y-axis" transform="translate(60, 50)"></g>
+            <text id="select-trend-topic"></text>
             <g transform="translate(50, 50) " id="select-plot">
                 <circle cx="10.0" cy="8.04" r="0.4">
                   <title>10.0, 8.04</title>
@@ -204,8 +209,11 @@
                 
         </svg> 
 
-        <svg id="us-plotChart" class="plotChartFrame" width="300", height="300" transform="translate(100, 0)">
+        <svg id="us-plotChart" class="plotChartFrame" width="300", height="300">
             <rect width="300" height="300"> </rect>
+            <g id="us-x-axis" transform="translate(60, 250)"></g>
+            <g id="us-y-axis" transform="translate(60, 50)"></g>
+            <text id="us-trend-topic"></text>
             <g transform="translate(50, 50) " id="us-plot">
                 <circle cx="10.0" cy="8.04" r="0.4">
                   <title>10.0, 8.04</title>
