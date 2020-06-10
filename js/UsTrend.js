@@ -61,11 +61,11 @@ class UsTrend {
 	getPast30Days() {
 		var arr = [];
 		var simObj = this.data;
-		for (let i = 30; i >= 0; i--) {
+		for (let i = 29; i >= 0; i--) {
 
 			arr.push(Object.keys(simObj)[Object.keys(simObj).length - 1 - i]);
 		}
-
+		console.log(arr);
 		return arr;
 		// var arr = [];
 		// var beforedate = new Date();

@@ -2,7 +2,6 @@ class SelectTrend {
 	constructor(fullData) {
 		this.fullData = fullData;
 		this.past30Days = this.getPast30Days();
-		console.log(this.past30Days);
 		
 		this.data;
 	}
@@ -76,7 +75,7 @@ class SelectTrend {
 	getPast30Days() {
 		var arr = [];
 		var simObj = this.fullData[1];
-		for (let i = 30; i >= 0; i--) {
+		for (let i = 29; i >= 0; i--) {
 
 			arr.push(Object.keys(simObj)[Object.keys(simObj).length - 1 - i]);
 		}
