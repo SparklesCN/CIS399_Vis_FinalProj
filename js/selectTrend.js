@@ -64,8 +64,8 @@ class SelectTrend {
 
 
 
-        	.attr("x", 20)
-			.attr("y", 20)
+        	.attr("x", 0)
+			.attr("y", 0)
 			.attr("font-weight", "bold")
 			.attr("font-style", "italic");
 	}
