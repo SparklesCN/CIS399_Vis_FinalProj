@@ -11,4 +11,4 @@ Features:
 4. Dynamic Selected Region Scatterplot Chart for Past 30 Days;
 5. Dynamic U.S Scatterplot Chart for Past 30 Days;
 
-![OVERGIF](https://github.com/SparklesCN/CIS399_Vis_FinalProj/blob/master/imgs/intro.gif)
+![OVERGIF](https://github.com/SparklesCN/CIS399_Vis_FinalProj/blob/master/imgs/introduction.gif)
