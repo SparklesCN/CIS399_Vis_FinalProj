@@ -2,6 +2,7 @@ class Map {
 	constructor(data, updateSelect) {
         this.updateSelect = updateSelect;
 		this.data = data;
+        this.yesterday = this.getYesterday();
         this.projection = d3.geoWinkel3().scale(140).translate([365, 225]);
 	}
 
@@ -83,20 +84,38 @@ class Map {
             .attr("id", (d) => {
                 // console.log(d);
                 if (d["Province/State"] != "") {
-                    return d["Province/State"] + ", " + d["Country/Region"];
+                    return d["Province/State"];
                 }
                 return d["Country/Region"];
             })
             .on("click", function(d, i) {
                 that.updateSelect(d);
             })
+            .on("mouseover", () => {
+                d3.select(event.currentTarget)
+                  .style("fill", "#c7001e");
+              })
+            .on("mouseout", () => {
+              d3.select(event.currentTarget)
+                .style("fill", "silver");
+            })
             .append("title")
             .text((d) => {
                 if (d["Province/State"] != "") {
-                    return d["Province/State"] + ", " + d["Country/Region"];
+                    return d["Province/State"] + ", " + d["Country/Region"] + "; cases: " + d[that.yesterday];
                 }
-                return d["Country/Region"];
+                return d["Country/Region"] + "; cases: " + d[that.yesterday];
             });
 			
 	}
+
+    getYesterday() {
+        var yesterday = new Date();
+        yesterday = new Date(new Date().setDate(yesterday.getDate()- 2))
+        var dd = String(yesterday.getDate());
+        var mm = String(yesterday.getMonth() + 1); //January is 0!
+        var yyyy = yesterday.getFullYear();
+        yesterday = mm + '/' + dd + '/' + yyyy.toString()[2] + yyyy.toString()[3]
+        return yesterday;
+    }
 }
