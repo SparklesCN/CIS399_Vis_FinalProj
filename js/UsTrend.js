@@ -3,7 +3,6 @@ class UsTrend {
 		this.data = data;
 		
 		this.past30Days = this.getPast30Days();
-		console.log(this.past30Days);
 		this.graphPlots();
 	}
 

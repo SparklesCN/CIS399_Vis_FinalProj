@@ -27,12 +27,10 @@ jQuery.ajax({
 
 
 function initProj(dynamicData) {
-  console.log("Get Dynamic Data from git: ")
-	console.log(dynamicData[225]);
 	// initial the map
 
   function updateSelect(data) {
-    console.log(data);
+    selectTrend.graphPlots(data);
 
   }
 
@@ -48,6 +46,7 @@ function initProj(dynamicData) {
   const rank = new worldRank(dynamicData);
 
   const usTrend = new UsTrend(dynamicData[225]);
+  const selectTrend = new SelectTrend();
 
 }
 
