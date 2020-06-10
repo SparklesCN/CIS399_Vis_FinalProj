@@ -110,12 +110,14 @@ class Map {
 	}
 
     getYesterday() {
-        var yesterday = new Date();
-        yesterday = new Date(new Date().setDate(yesterday.getDate()- 2))
-        var dd = String(yesterday.getDate());
-        var mm = String(yesterday.getMonth() + 1); //January is 0!
-        var yyyy = yesterday.getFullYear();
-        yesterday = mm + '/' + dd + '/' + yyyy.toString()[2] + yyyy.toString()[3]
-        return yesterday;
+        var yes = Object.keys(this.data[1])[Object.keys(this.data[1]).length - 1];        
+        return yes;
+        // var yesterday = new Date();
+        // yesterday = new Date(new Date().setDate(yesterday.getDate()- 2))
+        // var dd = String(yesterday.getDate());
+        // var mm = String(yesterday.getMonth() + 1); //January is 0!
+        // var yyyy = yesterday.getFullYear();
+        // yesterday = mm + '/' + dd + '/' + yyyy.toString()[2] + yyyy.toString()[3]
+        // return yesterday;
     }
 }

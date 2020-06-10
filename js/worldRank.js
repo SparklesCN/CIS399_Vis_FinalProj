@@ -73,30 +73,42 @@ class worldRank {
 	}
 
 	getYesterday() {
-		var yesterday = new Date();
-		yesterday = new Date(new Date().setDate(yesterday.getDate()- 2))
-		var dd = String(yesterday.getDate());
-		var mm = String(yesterday.getMonth() + 1); //January is 0!
-		var yyyy = yesterday.getFullYear();
-		yesterday = mm + '/' + dd + '/' + yyyy.toString()[2] + yyyy.toString()[3]
-		return yesterday;
+		var yes = Object.keys(this.data[1])[Object.keys(this.data[1]).length - 1];
+        return yes;
+		// var yesterday = new Date();
+		// yesterday = new Date(new Date().setDate(yesterday.getDate()- 2))
+		// var dd = String(yesterday.getDate());
+		// var mm = String(yesterday.getMonth() + 1); //January is 0!
+		// var yyyy = yesterday.getFullYear();
+		// yesterday = mm + '/' + dd + '/' + yyyy.toString()[2] + yyyy.toString()[3]
+		// return yesterday;
 	}
 
 	getPast30Days() {
 		var arr = [];
-		var beforedate = new Date();
-		beforedate = new Date(new Date().setDate(beforedate.getDate()- 2))
-		for (let i = 0; i < 30; i++) {
-			var priordate = new Date(new Date().setDate(beforedate.getDate()-i));
-			var dd2 = priordate.getDate();
-			var mm2 = priordate.getMonth()+1;//January is 0, so always add + 1
-			var yyyy2 = priordate.getFullYear();
-			var datefrommonthago = mm2 + '/' + dd2 + '/' + yyyy2.toString()[2] + yyyy2.toString()[3];
-			arr.push(datefrommonthago);
+		var simObj = this.data[1];
+		for (let i = 30; i >= 0; i--) {
+
+			arr.push(Object.keys(simObj)[Object.keys(simObj).length - 1 - i]);
 		}
-		
 
 		return arr;
+
+
+		// var arr = [];
+		// var beforedate = new Date();
+		// beforedate = new Date(new Date().setDate(beforedate.getDate()- 2))
+		// for (let i = 0; i < 30; i++) {
+		// 	var priordate = new Date(new Date().setDate(beforedate.getDate()-i));
+		// 	var dd2 = priordate.getDate();
+		// 	var mm2 = priordate.getMonth()+1;//January is 0, so always add + 1
+		// 	var yyyy2 = priordate.getFullYear();
+		// 	var datefrommonthago = mm2 + '/' + dd2 + '/' + yyyy2.toString()[2] + yyyy2.toString()[3];
+		// 	arr.push(datefrommonthago);
+		// }
+		
+
+		// return arr;
 
 	}
 

@@ -28,7 +28,6 @@ jQuery.ajax({
 
 function initProj(dynamicData) {
 	// initial the map
-
   function updateSelect(data) {
     selectTrend.graphPlots(data);
 
@@ -46,7 +45,7 @@ function initProj(dynamicData) {
   const rank = new worldRank(dynamicData);
 
   const usTrend = new UsTrend(dynamicData[225]);
-  const selectTrend = new SelectTrend();
+  const selectTrend = new SelectTrend(dynamicData);
 
 }
 

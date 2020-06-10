@@ -1,6 +1,9 @@
 class SelectTrend {
-	constructor() {
+	constructor(fullData) {
+		this.fullData = fullData;
 		this.past30Days = this.getPast30Days();
+		console.log(this.past30Days);
+		
 		this.data;
 	}
 
@@ -72,16 +75,24 @@ class SelectTrend {
 
 	getPast30Days() {
 		var arr = [];
-		var beforedate = new Date();
-		beforedate = new Date(new Date().setDate(beforedate.getDate()- 2))
-		for (let i = 29; i >= 0; i--) {
-			var priordate = new Date(new Date().setDate(beforedate.getDate()-i));
-			var dd2 = priordate.getDate();
-			var mm2 = priordate.getMonth()+1;//January is 0, so always add + 1
-			var yyyy2 = priordate.getFullYear();
-			var datefrommonthago = mm2 + '/' + dd2 + '/' + yyyy2.toString()[2] + yyyy2.toString()[3];
-			arr.push(datefrommonthago);
+		var simObj = this.fullData[1];
+		for (let i = 30; i >= 0; i--) {
+
+			arr.push(Object.keys(simObj)[Object.keys(simObj).length - 1 - i]);
 		}
+
 		return arr;
+		// var arr = [];
+		// var beforedate = new Date();
+		// beforedate = new Date(new Date().setDate(beforedate.getDate()- 2))
+		// for (let i = 29; i >= 0; i--) {
+		// 	var priordate = new Date(new Date().setDate(beforedate.getDate()-i));
+		// 	var dd2 = priordate.getDate();
+		// 	var mm2 = priordate.getMonth()+1;//January is 0, so always add + 1
+		// 	var yyyy2 = priordate.getFullYear();
+		// 	var datefrommonthago = mm2 + '/' + dd2 + '/' + yyyy2.toString()[2] + yyyy2.toString()[3];
+		// 	arr.push(datefrommonthago);
+		// }
+		// return arr;
 	}
 }
